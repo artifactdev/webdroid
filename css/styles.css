@@ -1,0 +1,19 @@
+body {padding:0;margin:0;}
+
+#wrapper {width:100%;}
+
+#device {
+	width:405px;
+	height:800px;
+	background: url(../images/background.png) no-repeat;
+	margin:0 auto;
+	position:relative;
+}
+
+#deviceDisplay {
+	position:absolute;
+	width:350px;
+	height:575px;
+	background:green;
+	margin:96px 0 0 28px;
+}
