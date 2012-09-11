@@ -1,4 +1,4 @@
-body {padding:0;margin:0;}
+﻿body {padding:0;margin:0;}
 
 #wrapper {width:100%;}
 
@@ -17,3 +17,54 @@ body {padding:0;margin:0;}
 	background:green;
 	margin:96px 0 0 28px;
 }
+
+UL {
+	padding:0px;
+	list-style:none;
+	margin:0px;
+}
+UL LI { margin:0px; }
+UL#deviceNavigationMain {
+	width:350px;
+	height:40px;
+	margin:0 0 0 28px;
+	position:absolute;
+	top:675px;
+}
+UL#deviceNavigationMain LI {
+	float:left;
+	width:75px;
+	height:40px;
+	margin:0 20px;
+	cursor:pointer;
+	text-indent:-10000px;
+}
+
+UL#deviceNavigationSound {
+	width:25px;
+	height:125px;
+	position:absolute;
+	top:250px;
+	left:-8px;
+}
+UL#deviceNavigationSound LI {
+	width:100%;
+	height:40px;
+	margin:15px 0;
+	cursor:pointer;
+	text-indent:-10000px;
+}
+
+#deviceOnOffSwitch{
+	position:absolute;
+	width:25px;
+	height:50px;
+	right:-10px;
+	top:180px;
+	text-indent:-10000px;
+	cursor:pointer;
+}
+
+
+
+
