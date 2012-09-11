@@ -2,21 +2,21 @@
  * (c) 2012 Markus Jahn / Jeremias Arnstadt
  */
 
-var DashBoard = {
+var LockScreen = {
 
-	id : "",
+	id : "lockScreen",
 	
 	show : function() {
-		ApplicationScreenHelper.showApplication( DashBoard.id, DashBoard );
+		ApplicationScreenHelper.showApplication( LockScreen.id, LockScreen );
 		
 	},
 	
 	hide : function() {
-		ApplicationScreenHelper.hideApplication( DashBoard.id );
+		ApplicationScreenHelper.hideApplication( LockScreen.id );
 	},
 	
 	close : function() {
-		ApplicationScreenHelper.closeApplication( DashBoard.id );
+		ApplicationScreenHelper.closeApplication( LockScreen.id );
 	},
 	
 	created : function() {
@@ -41,5 +41,5 @@ var DashBoard = {
 		'</div>' + 
 	'</div>' + 
 	'</div>'
-
+	
 };

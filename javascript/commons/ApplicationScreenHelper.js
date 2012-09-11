@@ -6,10 +6,21 @@ var ApplicationScreenHelper = {
 
 	applicationCounter : 0,
 
-	createNewApplication : function() {
-		var id = ApplicationScreenHelper.applicationCounter++;
-		var element = $( "<div />", {"id" : "deviceApplication_" + id , "class" : "deviceApplication"}).appendTo( deviceDisplay );
-		return { id : id, element : element };
+	createNewApplication : function( id, screenHandler ) {
+		var application = null;
+		if (id == undefined || id == null) {
+			id = "deviceApplication_" + ApplicationScreenHelper.applicationCounter;
+			ApplicationScreenHelper.applicationCounter++;
+		} else {
+			application = ApplicationScreenHelper.findApplication( id );
+			if (application != null) {
+				return application;
+			}
+		}
+		var element = $( screenHandler.appHTML ).appendTo( deviceDisplay ).addClass("deviceApplication");
+		var application = { id : id, element : element };
+		screenHandler.created( application );
+		return application;
 	},
 	
 	closeApplication : function( id ) {
@@ -19,10 +30,10 @@ var ApplicationScreenHelper = {
 		}
 	},
 	
-	showApplication : function( id ) {
+	showApplication : function( id, screenHandler ) {
 		var application = ApplicationScreenHelper.findApplication( id );
 		if (application == null) {
-			application = ApplicationScreenHelper.createNewApplication();
+			application = ApplicationScreenHelper.createNewApplication( id, screenHandler );
 		}
 		application.element.show();
 		return application;
@@ -40,7 +51,7 @@ var ApplicationScreenHelper = {
 			return null;
 		}
 		
-		var applicationElement = $( "#deviceApplication_" + id );
+		var applicationElement = $( "#" + id );
 		if (applicationElement.length > 0) {
 			return { id : id, element : applicationElement };
 		}
