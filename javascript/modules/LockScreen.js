@@ -24,22 +24,26 @@ var LockScreen = {
 	},
 
 	appHTML : '<div id="lockScreen" class="deviceApplication">' +
-		'<div class="infoBar">' +
-			'<ul class="notification"></ul>' + 
-			'<ul class="systemInfo"><li>12:45</li><li>Akku</li><li>Empfang</li></ul>' + 
-		'</div>' +
-		'<div class="appArea">' +
-			'<div class="time">12:00</div>' +
-			'<div class="date">Di., 11. September</div>' + 
-			'<div class="weather"></div>' + 
-			'<div class="lockArea">' + 
-			'<ul class="lockItems">' + 
-				'<li class="lockCam"></li>' + 
-				'<li class="lockLock"></li>' + 
-				'<li class="lockUnlock"></li>' + 
-			'</ul>' + 
-		'</div>' + 
-	'</div>' + 
-	'</div>'
+				'<div class="infoBar">' +
+					'<ul class="notification"></ul>' +
+					'<ul class="systemInfo">' +
+						'<li class="battery">Akku</li>' +
+						'<li class="network">Empfang</li>' +
+					'</ul>' +
+				'</div>' +
+				'<div class="appArea">' +
+					'<div class="time right">13:22</div>' +
+					'<div class="date right">Di., 11. September</div>' +
+					'<div class="weather"></div>' +
+					'<div class="lockArea">' +
+						'<div class="actionCircle"></div>' +	
+						'<div class="lockItems">' +
+							'<div class="lockCam left"></div>' +
+							'<div class="lockLock left"></div>' +
+							'<div class="lockUnlock left"></div>' +
+						'</div>' +
+					'</div>' +
+				'</div>' +
+			'</div>'
 	
 };
