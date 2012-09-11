@@ -10,8 +10,6 @@
 	<div id="device">
 		<div id="deviceDisplay">
 			<div id="homeScreen"></div>
-			
-			aa
 		</div>
 		<ul id="deviceNavigationMain">
 			<li>Zurück</li>
@@ -25,8 +23,12 @@
 		<div id="deviceOnOffSwitch">On / Off Switch</div>
 	</div>
 </div>
-	<script type="text/javascript"  href="./javascript/libs/jquery-1.8.0.js"></script>
-	<script type="text/javascript"  href="./javascript/libs/jquery-ui-1.8.23.custom.min.js"></script>
-	<script type="text/javascript"  href="./javascript/libs/jquery-1.8.0.js"></script>
+	<script type="text/javascript" src="./javascript/libs/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="./javascript/libs/jquery-ui-1.8.23.custom.min.js"></script>
+
+	<!-- GuiHandler muss immer als erstes import sein! -->
+	<script type="text/javascript" src="./javascript/commons/GuiHandler.js"></script>
+	<script type="text/javascript" src="./javascript/commons/ApplicationScreenHelper.js"></script>
+	
 </body>
 </html>
