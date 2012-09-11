@@ -70,16 +70,11 @@ UL#deviceNavigationSound LI {
 /* ################################################ */
 .standByScreen {
 	width:100%;
-<<<<<<< HEAD
-	height:675px;
-	background:black !important;
-=======
 	height:630px;
-	background:black;
+	background:black !important;
 	position:absolute;
 	top:0;
 	left:0;
->>>>>>> added Lockscreen
 }
 
 .deviceApplication  {
