@@ -44,7 +44,8 @@ var LockScreen = {
 				if ($( this ).attr("id") == "lockUnlock") {
 					DeviceManager.unlockDevice();
 				} else {
-					// TODO cam
+					// cam
+					DeviceManager.openCam();
 				}
 			}});
 

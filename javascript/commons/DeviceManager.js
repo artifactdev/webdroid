@@ -33,6 +33,11 @@ var DeviceManager = {
 			//show dashboard
 			DashBoard.show();
 		}
+	},
+
+	openCam : function() {
+		LockScreen.hide();
+		CamApp.show();
 	}
 	
 };
