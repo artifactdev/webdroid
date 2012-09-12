@@ -8,7 +8,11 @@ var LockScreen = {
 	
 	show : function() {
 		ApplicationScreenHelper.showApplication( LockScreen.id, LockScreen );
-		
+		LockScreen.refreshLockItem();
+	},
+	
+	refreshLockItem : function() {
+		$( "#lockItem" ).removeAttr("style");
 	},
 	
 	hide : function() {
@@ -21,18 +25,6 @@ var LockScreen = {
 	
 
 	created : function( application ) {
-		// Uhrzeit und so
-		/*$( ".unlockItems DIV" ).sortable({
-			disabled: true
-		});
-		$( "#lockItem" ).draggable({
-			snap: "#lockUnlock", 
-			snapMode: 'inner', 
-			revert: true,
-			stop: function(event, ui) {
-				var moo = ui;
-			}
-		});*/
 		
 		$( "#lockItem" ).draggable({ 
 			revert: "invalid", 
@@ -50,10 +42,9 @@ var LockScreen = {
 			tolerance: "pointer",
 			drop: function( event, ui ) {
 				if ($( this ).attr("id") == "lockUnlock") {
-					//ui.draggable.hide();
 					DeviceManager.unlockDevice();
 				} else {
-					// cam
+					// TODO cam
 				}
 			}});
 
