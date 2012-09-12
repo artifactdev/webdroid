@@ -19,8 +19,42 @@ var LockScreen = {
 		ApplicationScreenHelper.closeApplication( LockScreen.id );
 	},
 	
-	created : function() {
+	created : function( application ) {
 		// Uhrzeit und so
+		/*$( ".unlockItems DIV" ).sortable({
+			disabled: true
+		});
+		$( "#lockItem" ).draggable({
+			snap: "#lockUnlock", 
+			snapMode: 'inner', 
+			revert: true,
+			stop: function(event, ui) {
+				var moo = ui;
+			}
+		});*/
+		
+		$( "#lockItem" ).draggable({ 
+			revert: "invalid", 
+			start: function( event, ui ) {
+				$( ".actionCircle, .unlockItems" ).stop(true, true).fadeIn();
+			}, 
+			stop: function(event, ui) {
+				$( ".actionCircle, .unlockItems" ).stop(true, true).fadeOut();
+			}
+		});
+
+		$( ".unlockItems DIV" ).droppable({
+			tolerance: "pointer",
+			drop: function( event, ui ) {
+				if ($( this ).attr("id") == "lockUnlock") {
+					//ui.draggable.hide();
+					DeviceManager.unlockDevice();
+				} else {
+					// cam
+				}
+			}
+		});
+		
 	},
 
 	appHTML : '<div id="lockScreen" class="deviceApplication">' +
@@ -36,12 +70,12 @@ var LockScreen = {
 					'<div class="date right">Di., 11. September</div>' +
 					'<div class="weather"></div>' +
 					'<div class="lockArea">' +
-						'<div class="actionCircle"></div>' +	
-						'<div class="lockItems">' +
-							'<div class="lockCam left"></div>' +
-							'<div class="lockLock left"></div>' +
-							'<div class="lockUnlock left"></div>' +
+						'<div class="actionCircle hidden"></div>' +	
+						'<div class="unlockItems hidden">' +
+							'<div id="lockUnlockCam" class="left"></div>' +
+							'<div id="lockUnlock" class="right"></div>' +
 						'</div>' +
+						'<div id="lockItem"></div>' +
 					'</div>' +
 				'</div>' +
 			'</div>'

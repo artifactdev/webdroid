@@ -3,11 +3,11 @@
  */
 var deviceDisplay = null;
 var deviceInStandBy = false;
-var GuiHandler = {
+var DeviceManager = {
 
 	initApplication : function() {
 		deviceDisplay = $( "#deviceDisplay" );
-		GuiHandler.initDeviceOnOffSwitch();
+		DeviceManager.initDeviceOnOffSwitch();
 		LockScreen.show();
 	},
 	
@@ -22,8 +22,13 @@ var GuiHandler = {
 			}
 			deviceInStandBy = !deviceInStandBy;
 		});	
+	},
+	
+	unlockDevice : function() {
+		LockScreen.hide();
+		// TODO
 	}
 	
 };
 
-$(GuiHandler.initApplication);
+$(DeviceManager.initApplication);
