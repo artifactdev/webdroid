@@ -38,9 +38,11 @@ var LockScreen = {
 			revert: "invalid", 
 			start: function( event, ui ) {
 				$( ".actionCircle, .unlockItems" ).stop(true, true).fadeIn();
+				$("#lockItem").addClass("dropping");
 			}, 
 			stop: function(event, ui) {
 				$( ".actionCircle, .unlockItems" ).stop(true, true).fadeOut();
+				$("#lockItem").removeClass("dropping");
 			}
 		});
 
