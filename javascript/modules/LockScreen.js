@@ -56,7 +56,8 @@ var LockScreen = {
 			}});
 
 		function updateClock() {
-			$(".time").html(Utilities.getTime());	
+			$(".time").html(Utilities.getTime());
+			$(".date").html(Utilities.getDate());	
 		}
 	       	
 
@@ -75,7 +76,7 @@ var LockScreen = {
 				'</div>' +
 				'<div class="appArea">' +
 					'<div class="time right"></div>' +
-					'<div class="date right">Di., 11. September</div>' +
+					'<div class="date right"></div>' +
 					'<div class="weather"></div>' +
 					'<div class="lockArea">' +
 						'<div class="actionCircle hidden"></div>' +	
