@@ -18,7 +18,7 @@ var ApplicationScreenHelper = {
 			}
 		}
 		var element = $( screenHandler.appHTML ).appendTo( deviceDisplay ).addClass("deviceApplication");
-		var application = { id : id, element : element };
+		var application = { id : id, element : element, handler : screenHandler};
 		screenHandler.created( application );
 		return application;
 	},
@@ -27,6 +27,7 @@ var ApplicationScreenHelper = {
 		var application = ApplicationScreenHelper.findApplication( id );
 		if (application != null) {
 			application.hide();
+			TaskManager.killTask( application );
 		}
 	},
 	
@@ -36,6 +37,7 @@ var ApplicationScreenHelper = {
 			application = ApplicationScreenHelper.createNewApplication( id, screenHandler );
 		}
 		application.element.show();
+		TaskManager.openTask( application );
 		return application;
 	},
 	
@@ -43,6 +45,7 @@ var ApplicationScreenHelper = {
 		var application = ApplicationScreenHelper.findApplication( id );
 		if (application != null) {
 			application.element.hide();
+			TaskManager.closeTask( application );
 		}
 	},
 	
@@ -50,11 +53,6 @@ var ApplicationScreenHelper = {
 		if (id == undefined || id == null) {
 			return null;
 		}
-		
-		var applicationElement = $( "#" + id );
-		if (applicationElement.length > 0) {
-			return { id : id, element : applicationElement };
-		}
-		return null;
+		return TaskManager.findTask( id );
 	}
 };

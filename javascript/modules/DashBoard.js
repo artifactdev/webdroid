@@ -4,11 +4,10 @@
 
 var DashBoard = {
 
-	id : "",
+	id : "dashBoard",
 	
 	show : function() {
-		ApplicationScreenHelper.showApplication( DashBoard.id, DashBoard );
-		
+		ApplicationScreenHelper.showApplication( DashBoard.id, DashBoard );	
 	},
 	
 	hide : function() {
@@ -23,21 +22,15 @@ var DashBoard = {
 		// Uhrzeit und so
 	},
 
-	appHTML : '<div id="lockScreen" class="deviceApplication">' +
+	appHTML : '<div id="dashBoard" class="deviceApplication">' +
 		'<div class="infoBar">' +
-			'<ul class="notification"></ul>' + 
-			'<ul class="systemInfo"><li>12:45</li><li>Akku</li><li>Empfang</li></ul>' + 
+			'<ul class="notification"></ul>' +
+			'<ul class="systemInfo">' +
+				'<li class="battery">Akku</li>' +
+				'<li class="network">Empfang</li>' +
+			'</ul>' +
 		'</div>' +
-		'<div class="appArea">' +
-			'<div class="time">12:00</div>' +
-			'<div class="date">Di., 11. September</div>' + 
-			'<div class="weather"></div>' + 
-			'<div class="lockArea">' + 
-			'<ul class="lockItems">' + 
-				'<li class="lockCam"></li>' + 
-				'<li class="lockLock"></li>' + 
-				'<li class="lockUnlock"></li>' + 
-			'</ul>' + 
+		'<div class="appArea">asdasd' +
 		'</div>' + 
 	'</div>' + 
 	'</div>'

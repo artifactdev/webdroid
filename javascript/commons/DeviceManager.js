@@ -17,7 +17,7 @@ var DeviceManager = {
 				StandByScreen.hide();
 				LockScreen.show();
 			} else {
-				LockScreen.hide();
+				TaskManager.hideActiveTask();
 				StandByScreen.show();
 			}
 			deviceInStandBy = !deviceInStandBy;
@@ -26,7 +26,13 @@ var DeviceManager = {
 	
 	unlockDevice : function() {
 		LockScreen.hide();
-		// TODO
+		if (TaskManager.activeTask != null) {
+			//activeTask vlt muss man hier nichts mehr machen
+			TaskManager.showActiveTask();
+		} else {
+			//show dashboard
+			DashBoard.show();
+		}
 	}
 	
 };
