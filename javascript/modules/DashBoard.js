@@ -51,6 +51,7 @@ var DashBoard = {
 		'<div class="infoBar">' +
 			'<ul class="notification"></ul>' +
 			'<ul class="systemInfo">' +
+				'<li class="time"></li>' +
 				'<li class="battery">Akku</li>' +
 				'<li class="network">Empfang</li>' +
 			'</ul>' +

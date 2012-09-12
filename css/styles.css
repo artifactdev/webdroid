@@ -348,15 +348,15 @@ UL#deviceNavigationSound LI {
 
 
 
-.dashBoardShortCuts { width:340px; height:65px; border-top:2px solid #FFF; position:absolute; bottom:0px; margin:0 5px; }
+.dashBoardShortCuts { width:340px; height:65px; border-top:2px solid rgba(255,255,255,0.6); position:absolute; bottom:0px; margin:0 5px; }
 .dashBoardShortCuts LI { float:left; width:55px; height:60px; margin:5px 5px 0px; text-indent:-10000px; cursor:pointer;}
-.dashBoardShortCuts LI:first-child {	margin-left:12px; }
-.dashBoardShortCuts LI:last-child { margin-right:12px; }
+.dashBoardShortCuts LI:first-child {	margin-left:11px; }
+.dashBoardShortCuts LI:last-child { margin-right:11px; }
 
 
 .iconMail {background: url(../images/appIcons/i-mail.png) 2px 0px no-repeat;}
 .iconCam {background: url(../images/appIcons/i-cam.png) 2px 0px no-repeat;}
-.iconApps {background: url(../images/appIcons/i-apps.png) 2px 0px no-repeat;}
+.iconApps {width:48px !important;height:48px !important;margin:5px 8px 0 !important;border-radius:48px;border:2px solid rgba(255,255,255,0.7);background: url(../images/appIcons/i-apps.png) -1px -1px no-repeat;}
 .iconNickel {background: url(../images/appIcons/i-nickel.png) 2px 0px no-repeat;}
 .iconMap {background: url(../images/appIcons/i-map.png) 2px 0px no-repeat;}
 
