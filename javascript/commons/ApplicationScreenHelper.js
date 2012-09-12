@@ -49,6 +49,14 @@ var ApplicationScreenHelper = {
 		}
 	},
 	
+	hideCurrentApplication : function() {
+		if (TaskManager.activeTask != null) {
+			var application = ApplicationScreenHelper.findApplication( TaskManager.activeTask.id );
+			ApplicationScreenHelper.hideApplication( TaskManager.activeTask.id );
+			TaskManager.closeTask( application );
+		}
+	},
+	
 	findApplication : function( id ) {
 		if (id == undefined || id == null) {
 			return null;

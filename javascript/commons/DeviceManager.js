@@ -11,6 +11,12 @@ var DeviceManager = {
 		LockScreen.show();
 				
 		DeviceManager.refreshAppShortCutListeners();
+		
+		$( "#deviceHomeButton" ).unbind().click(function() {
+			ApplicationScreenHelper.hideCurrentApplication();
+			DashBoard.show();
+		});
+		
 	},
 	
 	initDeviceOnOffSwitch : function() {
