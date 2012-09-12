@@ -19,6 +19,7 @@ var LockScreen = {
 		ApplicationScreenHelper.closeApplication( LockScreen.id );
 	},
 	
+
 	created : function( application ) {
 		// Uhrzeit und so
 		/*$( ".unlockItems DIV" ).sortable({
@@ -53,7 +54,34 @@ var LockScreen = {
 					// cam
 				}
 			}
-		});
+
+		function updateClock() {
+     		var currentTime = new Date ( );
+      		var currentHours = currentTime.getHours ( );
+      		var currentMinutes = currentTime.getMinutes ( );
+      		var currentSeconds = currentTime.getSeconds ( );
+ 
+      		// Pad the minutes and seconds with leading zeros, if required
+      		currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+      		currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
+ 
+ 
+     	 	// Convert an hours component of "0" to "12"
+      		currentHours = ( currentHours == 0 ) ? 12 : currentHours;
+ 
+      		// Compose the string for display
+      		var currentTimeString = currentHours + ":" + currentMinutes;
+       
+       
+       		$(".time").html(currentTimeString);
+
+
+        alert(currentTimeString);      
+ 		}
+ 		
+		
+   			setInterval('updateClock()', 1000);
+
 		
 	},
 
@@ -66,7 +94,7 @@ var LockScreen = {
 					'</ul>' +
 				'</div>' +
 				'<div class="appArea">' +
-					'<div class="time right">13:22</div>' +
+					'<div class="time right"></div>' +
 					'<div class="date right">Di., 11. September</div>' +
 					'<div class="weather"></div>' +
 					'<div class="lockArea">' +
