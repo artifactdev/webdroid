@@ -9,6 +9,8 @@ var DeviceManager = {
 		deviceDisplay = $( "#deviceDisplay" );
 		DeviceManager.initDeviceOnOffSwitch();
 		LockScreen.show();
+				
+		DeviceManager.refreshAppShortCutListeners();
 	},
 	
 	initDeviceOnOffSwitch : function() {
@@ -38,6 +40,13 @@ var DeviceManager = {
 	openCam : function() {
 		LockScreen.hide();
 		CamApp.show();
+	},
+	
+	refreshAppShortCutListeners : function() {
+		$( ".deviceAppShortCut" ).unbind().click(function() {
+			var handlerName = $( this ).attr("data-webdroid-handler");
+			eval( handlerName + ".show()" );
+		});
 	}
 	
 };

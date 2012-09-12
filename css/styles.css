@@ -343,3 +343,31 @@ UL#deviceNavigationSound LI {
 
 .camControl {width:100%; height:120px;background:#423f3f; position:absolute; bottom:0;}
 .camButton {margin:30px auto 0; height:30px; width: 30px; background:#33b5e5;border-radius:30px; border:15px solid #333;}
+
+
+
+
+
+.dashBoardShortCuts { width:340px; height:65px; border-top:2px solid #FFF; position:absolute; bottom:0px; margin:0 5px; }
+.dashBoardShortCuts LI { float:left; width:55px; height:60px; margin:5px 5px 0px; text-indent:-10000px; cursor:pointer;}
+.dashBoardShortCuts LI:first-child {	margin-left:12px; }
+.dashBoardShortCuts LI:last-child { margin-right:12px; }
+
+
+.iconMail {background: url(../images/appIcons/i-mail.png) 2px 0px no-repeat;}
+.iconCam {background: url(../images/appIcons/i-cam.png) 2px 0px no-repeat;}
+.iconApps {background: url(../images/appIcons/i-apps.png) 2px 0px no-repeat;}
+.iconNickel {background: url(../images/appIcons/i-nickel.png) 2px 0px no-repeat;}
+.iconMap {background: url(../images/appIcons/i-map.png) 2px 0px no-repeat;}
+
+
+#dashBoardApps {width:1750px; height:480px; position:absolute; left:-700px;}
+#dashBoardApps > DIV {width:350px; height:480px; position:relative; float:left; opacity:0.5;}
+#dashBoard0 {background:blue;}
+#dashBoard1 {background:red;}
+#dashBoard2 {background:green;}
+#dashBoard3 {background:black;}
+#dashBoard4 {background:gray;}
+
+
+
