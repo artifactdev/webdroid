@@ -53,7 +53,7 @@ var LockScreen = {
 				} else {
 					// cam
 				}
-			}
+			}});
 
 		function updateClock() {
      		var currentTime = new Date ( );
@@ -80,7 +80,7 @@ var LockScreen = {
  		}
  		
 		
-   			setInterval('updateClock()', 1000);
+   		setInterval('updateClock()', 1000);
 
 		
 	},
