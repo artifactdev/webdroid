@@ -67,7 +67,7 @@ var DashBoard = {
 			'<ul class="dashBoardShortCuts">' +
 				'<li class="deviceAppShortCut iconMail" data-webdroid-handler="MailApp">Mail</li>' +
 				'<li class="deviceAppShortCut iconCam" data-webdroid-handler="CamApp">Kamera</li>' +
-				'<li class="deviceAppShortCut iconApps" data-webdroid-handler="AppsApp"></li>' +
+				'<li class="deviceAppShortCut iconApps" data-webdroid-handler="AppLauncher"></li>' +
 				'<li class="deviceAppShortCut iconNickel" data-webdroid-handler="NickelApp">Nickel</li>' +
 				'<li class="deviceAppShortCut iconMap" data-webdroid-handler="MapApp">Karte</li>' +
 			'</ul>' +

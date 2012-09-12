@@ -369,5 +369,11 @@ UL#deviceNavigationSound LI {
 #dashBoard3 {background:black;}
 #dashBoard4 {background:gray;}
 
+.launcherArea {background:#000; height:100%;}
+.launcherHeader {display:inline-block; width:100%;border-bottom:1px solid #33b5e5; font-size:14px;}
+.launcherHeader li {display:inline-block;padding:10px 20px;cursor: pointer;}
+.launcherArea li.active {border-bottom: 4px solid #33d5e5;}
+.appGrid li {float:left;width:70px;height:12px;background:red;margin:8px;font-size: 12px;text-align: center;padding-top:56px;cursor: pointer;}
+
 
 
