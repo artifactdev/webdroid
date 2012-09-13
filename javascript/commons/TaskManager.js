@@ -45,5 +45,3 @@ var TaskManager = {
 		return TaskManager.openedTasks.get( id );
 	}
 };
-
-//task = {id:"", element:"", handler:""}
