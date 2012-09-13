@@ -362,28 +362,21 @@ UL#deviceNavigationSound LI {
 
 
 #dashBoardApps {width:1750px; height:480px; position:absolute; left:-700px;}
-#dashBoardApps > DIV {width:340px; height:480px; position:relative; float:left; opacity:0.5; padding:0 5px;}
-#dashBoard0 {background:blue;}
+#dashBoardApps > DIV {width:340px; height:480px; position:relative; float:left; padding:0 5px;}
+/*#dashBoard0 {background:blue;}
 #dashBoard1 {background:red;}
 #dashBoard2 {background:green;}
 #dashBoard3 {background:black;}
-#dashBoard4 {background:gray;}
+#dashBoard4 {background:gray;}*/
 
 .launcherArea {background:#000; height:100%;}
-.launcherHeader {display:inline-block; width:100%;border-bottom:1px solid #33b5e5; font-size:14px;}
-.launcherHeader li {display:inline-block;padding:10px 20px;cursor: pointer;}
-.launcherArea li.active {border-bottom: 4px solid #33d5e5;}
-.appGrid li {float:left;width:70px;height:12px;background:red;margin:8px;font-size: 12px;text-align: center;padding-top:56px;cursor: pointer;}
+.launcherHeader {display:inline-block; width:100%; border-bottom:1px solid #33b5e5; font-size:14px;}
+.launcherHeader li {display:inline-block; padding:10px 20px; cursor: pointer;}
+.launcherArea li.active {border-bottom:4px solid #33d5e5;}
+.appGrid li { float:left; width:70px; height:12px; margin:8px; font-size:12px; text-align:center; padding-top:56px; cursor:pointer; }
 
-
-#dashBoardApps .deviceAppShortCut {
-	width:65px;
-	height:100px;
-	margin:10px;
-	background:red;
-	display:inline-block;
-	text-align:center;
-}
+#dashBoardApps .deviceAppShortCut {width:65px; height:100px; margin:10px; display:inline-block; text-align:center;}
+#dashBoardApps .deviceAppShortCut IMG {margin-top: 10px;}
 
 .deviceAppGrid {width:100%; height:480px; position:absolute; top:0px; font-family:arial;}
 .deviceAppGrid DIV{position:absolute; height:20px; width:20px; font-family:Arial; text-align:center;}
@@ -397,6 +390,7 @@ UL#deviceNavigationSound LI {
 .gridPlus7 {top:350px; left:160px;}
 .gridPlus8 {top:350px; left:245px;}
 
+.deviceAppShortCutGrid {width:85px; height:120px; float:left; display:inline-block;}
 
 
 

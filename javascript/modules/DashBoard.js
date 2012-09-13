@@ -120,10 +120,29 @@ var DashBoard = {
 				'<div class="appArea">' +
 					'<div id="dashBoardApps">' +
 						'<div id="dashBoard0"></div>' +
-						'<div id="dashBoard1"></div>' +
+						'<div id="dashBoard1">' + 							
+							'<div class="deviceAppShortCutGrid"></div>' +
+							'<div class="deviceAppShortCutGrid"></div>' +
+							'<div class="deviceAppShortCutGrid"></div>' +
+							'<div class="deviceAppShortCutGrid">' +
+								'<div class="deviceAppShortCut" data-webdroid-handler="CamApp"><img src="./images/appIcons/i-cam.png" />Kamera</div>' +
+							'</div>' +
+							'<div class="deviceAppShortCutGrid"></div>' +
+							'<div class="deviceAppShortCutGrid"></div>' +
+							'<div class="deviceAppShortCutGrid"></div>' +
+							'<div class="deviceAppShortCutGrid"></div>' +
+							'<div class="deviceAppShortCutGrid"></div>' +
+							'<div class="deviceAppShortCutGrid"></div>' +
+							'<div class="deviceAppShortCutGrid">' +
+								'<div class="deviceAppShortCut" data-webdroid-handler="MapApp"><img src="./images/appIcons/i-map.png" />Karte</div>' +
+							'</div>' +
+							'<div class="deviceAppShortCutGrid">' +
+								'<div class="deviceAppShortCut" data-webdroid-handler="NickelApp"><img src="./images/appIcons/i-nickel.png" />Nickel</div>' +
+							'</div>' +
+						'</div>' +
 						'<div id="dashBoard2">' +
 							'<div class="deviceAppShortCutGrid">' +
-								'<div class="deviceAppShortCut" data-webdroid-handler="CamApp">Kamera</div>' +
+								'<div class="deviceAppShortCut" data-webdroid-handler="CamApp"><img src="./images/appIcons/i-cam.png" />Kamera</div>' +
 							'</div>' +
 							'<div class="deviceAppShortCutGrid"></div>' +
 							'<div class="deviceAppShortCutGrid"></div>' +
@@ -136,10 +155,14 @@ var DashBoard = {
 							'<div class="deviceAppShortCutGrid"></div>' +
 							'<div class="deviceAppShortCutGrid"></div>' +
 							'<div class="deviceAppShortCutGrid"></div>' +
+							'<div class="deviceAppShortCutGrid">' +
+								'<div class="deviceAppShortCut" data-webdroid-handler="MapApp"><img src="./images/appIcons/i-map.png" />Karte</div>' +
+							'</div>' +
 							'<div class="deviceAppShortCutGrid"></div>' +
 							'<div class="deviceAppShortCutGrid"></div>' +
-							'<div class="deviceAppShortCutGrid"></div>' +
-							'<div class="deviceAppShortCutGrid"></div>' +
+							'<div class="deviceAppShortCutGrid">' +
+								'<div class="deviceAppShortCut" data-webdroid-handler="NickelApp"><img src="./images/appIcons/i-nickel.png" />Nickel</div>' +
+							'</div>' +
 						'</div>' + 
 						'<div id="dashBoard3"></div>' +
 						'<div id="dashBoard4"></div>' +
