@@ -382,17 +382,8 @@ UL#deviceNavigationSound LI {
 	margin:10px;
 	background:red;
 	display:inline-block;
+	text-align:center;
 }
-
-
-
-
-
-
-
-
-
-
 
 .deviceAppGrid {width:100%; height:480px; position:absolute; top:0px; font-family:arial;}
 .deviceAppGrid DIV{position:absolute; height:20px; width:20px; font-family:Arial; text-align:center;}

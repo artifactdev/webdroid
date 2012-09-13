@@ -126,15 +126,32 @@ var DashBoard = {
 								'<div class="deviceAppShortCut" data-webdroid-handler="CamApp">Kamera</div>' +
 							'</div>' +
 							'<div class="deviceAppShortCutGrid"></div>' +
-			'<ul class="dashBoardShortCuts">' +
-				'<li class="deviceAppShortCut iconMail" data-webdroid-handler="MailApp">Mail</li>' +
-				'<li class="deviceAppShortCut iconCam" data-webdroid-handler="CamApp">Kamera</li>' +
-				'<li class="deviceAppShortCut iconApps" data-webdroid-handler="AppLauncher"></li>' +
-				'<li class="deviceAppShortCut iconNickel" data-webdroid-handler="NickelApp">Nickel</li>' +
-				'<li class="deviceAppShortCut iconMap" data-webdroid-handler="MapApp">Karte</li>' +
-			'</ul>' +
-		'</div>' + 
-	'</div>' + 
-	'</div>'
+							'<div class="deviceAppShortCutGrid"></div>' +
+							'<div class="deviceAppShortCutGrid"></div>' +
+							'<div class="deviceAppShortCutGrid"></div>' +
+							'<div class="deviceAppShortCutGrid"></div>' +
+							'<div class="deviceAppShortCutGrid"></div>' +
+							'<div class="deviceAppShortCutGrid"></div>' +
+							'<div class="deviceAppShortCutGrid"></div>' +
+							'<div class="deviceAppShortCutGrid"></div>' +
+							'<div class="deviceAppShortCutGrid"></div>' +
+							'<div class="deviceAppShortCutGrid"></div>' +
+							'<div class="deviceAppShortCutGrid"></div>' +
+							'<div class="deviceAppShortCutGrid"></div>' +
+							'<div class="deviceAppShortCutGrid"></div>' +
+							'<div class="deviceAppShortCutGrid"></div>' +
+						'</div>' + 
+						'<div id="dashBoard3"></div>' +
+						'<div id="dashBoard4"></div>' +
+					'</div>' + 
+					'<ul class="dashBoardShortCuts">' +
+						'<li class="deviceAppShortCut iconMail" data-webdroid-handler="MailApp">Mail</li>' +
+						'<li class="deviceAppShortCut iconCam" data-webdroid-handler="CamApp">Kamera</li>' +
+						'<li class="deviceAppShortCut iconApps" data-webdroid-handler="AppLauncher"></li>' +
+						'<li class="deviceAppShortCut iconNickel" data-webdroid-handler="NickelApp">Nickel</li>' +
+						'<li class="deviceAppShortCut iconMap" data-webdroid-handler="MapApp">Karte</li>' +
+					'</ul>' +
+				'</div>' + 
+			'</div>'
 
 };
