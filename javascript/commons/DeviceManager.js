@@ -47,7 +47,7 @@ var DeviceManager = {
 		LockScreen.hide();
 		CamApp.show();
 	},
-	
+
 	refreshAppShortCutListeners : function() {
 		$( ".deviceAppShortCut" ).click(function() {
 			var handlerName = $( this ).attr("data-webdroid-handler");
