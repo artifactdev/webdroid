@@ -25,9 +25,7 @@ var AppLauncher = {
 	
 
 	created : function( application ) {
-		
-		
-		
+		DeviceManager.refreshAppShortCutListeners();
 	},
 
 	appHTML : '<div id="AppLauncher" class="deviceApplication">' +

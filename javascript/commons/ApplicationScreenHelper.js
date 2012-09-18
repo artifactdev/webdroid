@@ -36,6 +36,7 @@ var ApplicationScreenHelper = {
 		if (application == null) {
 			application = ApplicationScreenHelper.createNewApplication( id, screenHandler );
 		}
+		ApplicationScreenHelper.hideCurrentApplication();
 		application.element.show();
 		TaskManager.openTask( application );
 		return application;

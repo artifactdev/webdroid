@@ -24,7 +24,7 @@ var TaskManager = {
 	}, 
 	
 	closeTask : function( task ) {
-		if (TaskManager.activeTask.id == task.id) {
+		if (TaskManager.activeTask != null && TaskManager.activeTask.id == task.id) {
 			TaskManager.activeTask = null;
 		}
 	},
