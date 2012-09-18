@@ -37,7 +37,7 @@ var ApplicationScreenHelper = {
 			application = ApplicationScreenHelper.createNewApplication( id, screenHandler );
 		}
 		ApplicationScreenHelper.hideCurrentApplication();
-		application.element.show();
+		ApplicationScreenHelper.fadeIn( application );
 		TaskManager.openTask( application );
 		return application;
 	},
@@ -45,7 +45,7 @@ var ApplicationScreenHelper = {
 	hideApplication : function( id ) {
 		var application = ApplicationScreenHelper.findApplication( id );
 		if (application != null) {
-			application.element.hide();
+			ApplicationScreenHelper.fadeOut( application );
 			TaskManager.closeTask( application );
 		}
 	},
@@ -63,5 +63,50 @@ var ApplicationScreenHelper = {
 			return null;
 		}
 		return TaskManager.findTask( id );
+	},
+	
+	fadeIn : function( application ) {
+		var element = application.element;
+		if (!application.handler.useCloseAnimation) {
+			element.show();
+			return;
+		}
+		var hOrg = element.height();
+		var wOrg = element.width();
+		element.css({
+			"width" : 10,
+			"height": 15,
+			"marginLeft": 170,
+			"marginTop" : 280
+		});
+		
+		element.stop(true, true).show().animate({
+			"width" : wOrg,
+			"height": hOrg,
+			"marginLeft": 0,
+			"marginTop" : 0
+		});
+	},
+	
+	fadeOut : function( application ) {
+		var element = application.element;
+		if (!application.handler.useCloseAnimation) {
+			element.hide();
+			return;
+		}
+		var hOrg = element.height();
+		var wOrg = element.width();
+		element.stop(true, true).animate({
+			"width" : 10,
+			"height": 15,
+			"marginLeft": 170,
+			"marginTop" : 280
+		}, function() {
+			element.hide().css({
+				"width" : wOrg,
+				"height": hOrg
+			});
+		});
 	}
+
 };

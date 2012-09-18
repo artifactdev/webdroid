@@ -6,6 +6,8 @@ var LockScreen = {
 
 	id : "lockScreen",
 	
+	useCloseAnimation : false,
+	
 	show : function() {
 		ApplicationScreenHelper.showApplication( LockScreen.id, LockScreen );
 		LockScreen.refreshLockItem();

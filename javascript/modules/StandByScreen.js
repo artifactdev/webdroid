@@ -6,6 +6,8 @@ var StandByScreen = {
 	
 	id : "standByScreen",
 	
+	useCloseAnimation : false,
+	
 	show : function() {
 		ApplicationScreenHelper.showApplication( StandByScreen.id, StandByScreen );
 		
