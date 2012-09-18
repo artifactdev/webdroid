@@ -31,9 +31,8 @@ var ToDoApp = {
         });
 
         // create new to do when clicking 'new'
-        $('#new').click(function() {
-          var title = prompt('To Do:');
-          createTodo(title);
+        $('.addItem').click(function() {
+          createTodo();
           return false;
         });
 
@@ -41,22 +40,6 @@ var ToDoApp = {
         $('.delete').live('click', function(e) {
           $(e.target).parent('li').remove();
           saveTodos();
-          return false;
-        });
-
-        // clicking title shows qrcode
-        $('.title').live('click', function(e) {
-          var title = $(e.target).html();
-          var loc = $(e.target).parent().find('.loc').html();
-          $('#todos').hide();
-          append_qrcode(8, 'qrcode', location.href + '#' + JSON.stringify([title, loc]));
-          $('#todo').show();
-          $('.back').click(function() {
-            $('#qrcode').empty();
-            $('#todo').hide();
-            $('#todos').show();
-            return false;
-          });
           return false;
         });
 
@@ -76,11 +59,13 @@ var ToDoApp = {
       $(window).bind('hashchange', checkHash);
 
       function buildTodo(title, done, loc) {
-        return "<li><input type='checkbox' " + (done ? "checked='checked'" : '') + "/> <a href='#' class='title'>" + title + "</a> <a href='#' class='delete'>x</a> <br/><span class='loc'>" + (loc || '') + "</span></li>";
+        return "<li><input type='checkbox' " + (done ? "checked='checked'" : '') + "/> <a href='#' class='title'>" + title + "</a> <a href='#' class='delete right'>x</a> <br/><span class='loc'>" + (loc || '') + "</span></li>";
       }
 
       function createTodo(title, done, loc) {
+      	var title = $('.todoInput').val();
         $('#list').append(buildTodo(title, !!done, loc || currentLoc));
+        $('.todoInput').attr("value","");
         saveTodos();
       }
 
@@ -121,8 +106,9 @@ var ToDoApp = {
 				'</div>' +
 				'<div class="appArea">' +
 					'<div id="todos">' +
+						'<input class="todoInput" placeholder="Ich möchte..." type="text"><span class="addItem">+</span></input>' +
+						
       					'<ul id="list"></ul>' +
-      					'<p><a href="#" id="new">new</a></p>' +
     				'</div>' +
 				'</div>' +
 			'</div>'

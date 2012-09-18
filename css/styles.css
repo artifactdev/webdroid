@@ -392,7 +392,16 @@ UL#deviceNavigationSound LI {
 
 .deviceAppShortCutGrid {width:85px; height:120px; float:left; display:inline-block;}
 
+/* Todo App */
 
+#toDoScreen {background:#000;}
 
+.todoInput {color:#fff; z-index:111; position:relative; padding:3px 20px 3px 10px; font-size: 14px; width:85%; margin:0 auto; border-bottom:#33b5e5 1px solid; border-left:transparent; border-right:transparent; border-top:transparent; background:none;}
+.addItem {margin-left:-14px; z-index:999; position:relative;}
 
+#todos #list {margin-top:15px;}
+
+#list li {padding:5px 0 5px 10px;width:100%;border-bottom:1px solid #7b7b7b;}
+#list li a {text-decoration: none; color:#a7a7a7;}
+#list li a.delete.right {margin-right: 30px;}
 
