@@ -5,6 +5,8 @@
 var AppLauncher = {
 
 	id : "appLauncher",
+
+	useCloseAnimation : true,
 	
 	show : function() {
 		ApplicationScreenHelper.showApplication( AppLauncher.id, AppLauncher );

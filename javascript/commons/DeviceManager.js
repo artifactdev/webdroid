@@ -3,6 +3,7 @@
  */
 var deviceDisplay = null;
 var deviceInStandBy = false;
+var deviceLocked = false;
 var DeviceManager = {
 
 	initApplication : function() {
@@ -13,8 +14,10 @@ var DeviceManager = {
 		DeviceManager.refreshAppShortCutListeners();
 		
 		$( "#deviceHomeButton" ).unbind().click(function() {
-			ApplicationScreenHelper.hideCurrentApplication();
-			DashBoard.show();
+			if (!deviceInStandBy && !deviceLocked) {
+				ApplicationScreenHelper.hideCurrentApplication();
+				DashBoard.show();
+			}
 		});
 		
 	},
@@ -22,6 +25,7 @@ var DeviceManager = {
 	initDeviceOnOffSwitch : function() {
 		$( "#deviceOnOffSwitch" ).unbind().click(function() {
 			if (deviceInStandBy) {
+				deviceLocked = true;
 				StandByScreen.hide();
 				LockScreen.show();
 			} else {
@@ -34,6 +38,7 @@ var DeviceManager = {
 	
 	unlockDevice : function() {
 		LockScreen.hide();
+		deviceLocked = false;
 		if (TaskManager.activeTask != null) {
 			//activeTask vlt muss man hier nichts mehr machen
 			TaskManager.showActiveTask();
@@ -44,6 +49,7 @@ var DeviceManager = {
 	},
 
 	openCam : function() {
+		deviceLocked = false;
 		LockScreen.hide();
 		CamApp.show();
 	},

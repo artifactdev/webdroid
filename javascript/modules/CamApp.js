@@ -6,6 +6,8 @@ var CamApp = {
 
 	id : "camScreen",
 	
+	useCloseAnimation : true,
+	
 	show : function() {
 		ApplicationScreenHelper.showApplication( CamApp.id, CamApp );
 		

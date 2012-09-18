@@ -6,6 +6,8 @@ var DashBoard = {
 
 	id : "dashBoard",
 	
+	useCloseAnimation : false,
+	
 	show : function() {
 		ApplicationScreenHelper.showApplication( DashBoard.id, DashBoard );
 		DeviceManager.refreshAppShortCutListeners();

@@ -5,7 +5,9 @@
 var ToDoApp = {
 
 	id : "toDoScreen",
-	
+
+	useCloseAnimation : true,
+
 	show : function() {
 		ApplicationScreenHelper.showApplication( ToDoApp.id, ToDoApp );
 		
