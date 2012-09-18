@@ -127,7 +127,7 @@ var DashBoard = {
 							'<div class="deviceAppShortCutGrid">' +
 								'<div class="deviceAppShortCut" data-webdroid-handler="CamApp"><img src="./images/appIcons/i-cam.png" />Kamera</div>' +
 							'</div>' +
-							'<div class="deviceAppShortCutGrid"></div>' +
+							'<div class="deviceAppShortCutGrid" data-webdroid-handler="ToDoApp">ToDo</div>' +
 							'<div class="deviceAppShortCutGrid"></div>' +
 							'<div class="deviceAppShortCutGrid"></div>' +
 							'<div class="deviceAppShortCutGrid"></div>' +

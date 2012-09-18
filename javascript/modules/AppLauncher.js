@@ -51,7 +51,7 @@ var AppLauncher = {
 						'<li>Kalender</li>' +
 						'<li>Kontakte</li>' +
 						'<li>Wetter</li>' +
-						'<li></li>' +
+						'<li class="deviceAppShortCut" data-webdroid-handler="ToDoApp">ToDo</li>' +
 						'<li></li>' +
 						'<li></li>' +
 						'<li></li>' +
